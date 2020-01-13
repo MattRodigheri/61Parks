@@ -1,24 +1,31 @@
 .App {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* height: 100vh; */
+  /* display: flex; */
+  /* align-items: center; */
   background-image: url("./assets/arches.jpg");
   background-size: cover;
 }
 
+.form-container {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 form {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-around;
-  width: 20%;
-  height: 25%;
+  height: 30%;
 }
 
 form input {
   height: 35px;
   border: 0 none;
   background: ivory;
+  margin: 1% 0;
   padding-left: 5%;
   font-size: larger;
 }
@@ -29,4 +36,13 @@ form input[type="submit"] {
   cursor: pointer;
   margin-left: auto;
   padding-left: 0;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  background-color: ivory;
+  font-size: xx-large;
 }
