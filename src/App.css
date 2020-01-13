@@ -1,13 +1,10 @@
-.App {
-  background-image: url("./assets/arches.jpg");
-  background-size: cover;
-}
-
 .form-container {
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("./assets/arches.jpg");
+  background-size: cover;
 }
 
 form {
@@ -36,7 +33,6 @@ form input[type="submit"] {
 }
 
 .Header {
-  /* height: 10vh; */
   background-color: ivory;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -44,13 +40,18 @@ form input[type="submit"] {
   grid-template-areas: ". title about";
 }
 
-.Header h1 {
+.title {
   grid-area: title;
   justify-self: center;
   align-self: center;
 }
 
-.Header h3 {
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.about-link {
   grid-area: about;
   justify-self: end;
   align-self: center;

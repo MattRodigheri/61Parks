@@ -1,21 +1,27 @@
 import React from "react";
-import Header from "./Header.js";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Login.js";
+import About from "./About.js";
 import "../App.css";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Login />
-      {/* <div className="App">
-        <form>
-          <input type="text" defaultValue="Email" />
-          <input type="text" defaultValue="Password" />
-          <input type="submit" value="Login" />
-        </form>
-      </div>*/}
-    </div>
+    <Router>
+      <h1 className="title">62Parks</h1>
+      <div>
+        <nav>
+          <Link to="/about">About</Link>
+        </nav>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
