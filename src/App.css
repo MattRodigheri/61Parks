@@ -3,13 +3,30 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("./assets/arches.jpg");
+  background-size: cover;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  width: 20%;
+  height: 25%;
+}
+
+form input {
+  height: 35px;
+  border: 0 none;
+  background: ivory;
+  padding-left: 5%;
+  font-size: larger;
 }
 
 form input[type="submit"] {
-  width: 50%;
+  width: 35%;
+  border: 0 none;
+  cursor: pointer;
+  margin-left: auto;
+  padding-left: 0;
 }
