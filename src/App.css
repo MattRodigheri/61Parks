@@ -1,7 +1,4 @@
 .App {
-  /* height: 100vh; */
-  /* display: flex; */
-  /* align-items: center; */
   background-image: url("./assets/arches.jpg");
   background-size: cover;
 }
@@ -39,10 +36,23 @@ form input[type="submit"] {
 }
 
 .Header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
+  /* height: 10vh; */
   background-color: ivory;
-  font-size: xx-large;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 10vh;
+  grid-template-areas: ". title about";
+}
+
+.Header h1 {
+  grid-area: title;
+  justify-self: center;
+  align-self: center;
+}
+
+.Header h3 {
+  grid-area: about;
+  justify-self: end;
+  align-self: center;
+  padding-right: 10%;
 }
