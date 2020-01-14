@@ -25,8 +25,12 @@ class App extends React.Component {
         yellowstone,
         zion
       ],
-      backgroundImage: arches
+      backgroundImage: arches,
+      headerLink: "About",
+      page: "about"
     };
+
+    this.changeLink = this.changeLink.bind(this);
   }
 
   componentDidMount() {
@@ -37,6 +41,24 @@ class App extends React.Component {
     this.setState({ backgroundImage: bg });
   }
 
+  changeLink() {
+    let endpoint;
+    let url = window.location.href.split("/");
+    if (url[url.length - 1] === "") {
+      endpoint = "About";
+      this.setState({
+        headerLink: endpoint,
+        page: `/${endpoint.toLowerCase()}`
+      });
+    } else {
+      endpoint = "Home";
+      this.setState({
+        headerLink: endpoint,
+        page: "/"
+      });
+    }
+  }
+
   render() {
     return (
       <Router>
@@ -44,17 +66,23 @@ class App extends React.Component {
           <header>
             <h1 className="title">62Parks</h1>
             <nav className="about-link">
-              <Link to="/about">
-                <h3>About</h3>
+              <Link to={this.state.page}>
+                <h3>{this.state.headerLink}</h3>
               </Link>
             </nav>
           </header>
           <Switch>
             <Route path="/about">
-              <About image={this.state.backgroundImage} />
+              <About
+                image={this.state.backgroundImage}
+                changeLink={this.changeLink}
+              />
             </Route>
             <Route path="/">
-              <Login image={this.state.backgroundImage} />
+              <Login
+                image={this.state.backgroundImage}
+                changeLink={this.changeLink}
+              />
             </Route>
           </Switch>
         </div>
