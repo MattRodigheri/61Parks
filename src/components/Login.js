@@ -1,9 +1,12 @@
 import React from "react";
 import "../App.css";
 
-function Login() {
+function Login(props) {
   return (
-    <div className="form-container">
+    <div
+      className="form-container"
+      style={{ backgroundImage: `url(${props.image})` }}
+    >
       <form>
         <input type="text" defaultValue="Email" />
         <input type="text" defaultValue="Password" />

@@ -31,7 +31,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./assets/arches.jpg");
+  /* background-image: url("./assets/arches.jpg"); */
   background-size: cover;
 }
 
