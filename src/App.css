@@ -1,15 +1,18 @@
+/* * {
+  box-sizing: border-box;
+} */
+
 header {
   background-color: ivory;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33.3% 33.3% 33.3%;
   grid-template-rows: 10vh;
-  grid-template-areas: ". title about";
 }
 
 .title {
-  grid-area: title;
   justify-self: center;
   align-self: center;
+  grid-column: 2;
 }
 
 a {
@@ -18,7 +21,6 @@ a {
 }
 
 .about-link {
-  grid-area: about;
   justify-self: end;
   align-self: center;
   padding-right: 10%;
