@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Login from "./Login.js";
 import About from "./About.js";
-import "../App.css";
+import "../styles/App.css";
 import arches from "../assets/arches.jpg";
 import bryce from "../assets/bryce.jpg";
 import joshua from "../assets/joshua.jpg";
@@ -51,7 +51,7 @@ class App extends React.Component {
           </header>
           <Switch>
             <Route path="/about">
-              <About />
+              <About image={this.state.backgroundImage} />
             </Route>
             <Route path="/">
               <Login image={this.state.backgroundImage} />

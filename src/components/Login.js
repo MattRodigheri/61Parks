@@ -1,7 +1,7 @@
 import React from "react";
-import "../App.css";
+import "../styles/Login.css";
 
-function Login(props) {
+const Login = props => {
   return (
     <div
       className="form-container"
@@ -14,6 +14,6 @@ function Login(props) {
       </form>
     </div>
   );
-}
+};
 
 export default Login;

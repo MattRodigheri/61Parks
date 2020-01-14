@@ -1,0 +1,23 @@
+header {
+  background-color: ivory;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-template-rows: 10vh;
+}
+
+.title {
+  justify-self: center;
+  align-self: center;
+  grid-column: 2;
+}
+
+.about-link {
+  justify-self: end;
+  align-self: center;
+  padding-right: 10%;
+}
+
+.about-link a {
+  color: black;
+  text-decoration: none;
+}
