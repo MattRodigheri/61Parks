@@ -7,11 +7,15 @@ import "../App.css";
 function App() {
   return (
     <Router>
-      <h1 className="title">62Parks</h1>
       <div>
-        <nav>
-          <Link to="/about">About</Link>
-        </nav>
+        <header>
+          <h1 className="title">62Parks</h1>
+          <nav className="about-link">
+            <Link to="/about">
+              <h3>About</h3>
+            </Link>
+          </nav>
+        </header>
         <Switch>
           <Route path="/about">
             <About />
