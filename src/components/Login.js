@@ -4,10 +4,12 @@ import "../styles/Login.css";
 class Login extends React.Component {
   constructor() {
     super();
+
+    this.state = {};
   }
 
   componentDidMount() {
-    this.props.changeLink();
+    // this.props.changeLink();
   }
 
   render() {
@@ -17,8 +19,8 @@ class Login extends React.Component {
         style={{ backgroundImage: `url(${this.props.image})` }}
       >
         <form>
-          <input type="text" defaultValue="Email" />
-          <input type="text" defaultValue="Password" />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Password" />
           <input type="submit" value="Login" />
         </form>
       </div>
